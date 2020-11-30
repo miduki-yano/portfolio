@@ -1,0 +1,174 @@
+/******** Base **********/
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+body {
+	font-family: Tahoma, sans-serif;
+}
+
+a:hover{
+  color: #88F;
+}
+
+img{
+  width: 100%;
+}
+
+header {
+  position:relative;
+  height: 8rem;
+  background: #333;
+  box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+}
+
+header h1{
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  font-size: 2rem;
+  color: white;
+}
+
+nav {
+  padding: 1rem 3rem ;
+  background: #333;
+}
+
+    nav ul{
+      display: flex;
+      flex-direction: row;
+    }
+
+    nav ul li{
+      margin-right: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+    }
+
+main {
+  width: 84%;
+  max-width: 1280px;
+  margin: 3rem auto 3rem auto;
+  padding-bottom: 2rem;
+  border-bottom: 1px dotted gray;
+  display: flex;
+  flex-wrap：wrap;
+  justify-content:space-between;
+}
+
+    section{
+      flex: 3;
+      margin-right: 4rem;
+    }
+
+        article{
+          margin-bottom: 2rem;
+          line-height: 180%;
+        }
+
+        article h1{
+          margin-bottom: 1rem;
+        }
+
+    aside{
+      flex: 1;
+    }
+
+        aside h1{
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+        aside ul li{
+          margin-bottom: 0.5rem;
+        }
+
+        aside ul li a{
+          color: black;
+        }
+
+footer {
+  width: 84%;
+  max-width: 1280px;
+  margin: 0 auto 5rem auto;
+	text-align: center;
+}
+
+
+/******** Gallery Style ********/
+
+
+section#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section#gallery article {
+  width: 160px;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+  line-height: 150%;
+}
+
+section#gallery article div{
+  margin-bottom: 0.5rem;
+}
+
+
+/******* Smart Phone *******/
+
+@media only screen and (max-width: 640px) {
+
+  header{
+    padding-top: 6rem;
+  }
+
+    header h1{
+      position: static;
+      text-align: center;
+    }
+
+  nav{
+    padding: 0;
+  }
+
+  	nav ul {
+  		flex-direction: column;
+  	}
+
+  	nav ul li {
+      margin: 0;
+  		padding: 1rem 0;
+  		border-bottom: 1px solid gray;
+      text-align: center;
+  	}
+
+  main {
+    width: 90%;
+    flex-direction: column;
+  }
+
+    section {
+      margin-right: 0;
+      border-bottom: 1px dotted gray;
+      margin-bottom: 2rem;
+    }
+
+    section#gallery {
+      display: block;
+    }
+
+    section#gallery article{
+      width: 100%;
+      margin: 0 auto 2rem auto;
+    }
+
+
+}
