@@ -1,174 +1,99 @@
-/******** Base **********/
-
 * {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  line-height: 100%;
+  list-style-type: none;
+  text-decoration: none;
+  font-weight: lighter;
 }
 
 body {
-	font-family: Tahoma, sans-serif;
+  font-family: sans-serif;
 }
 
-a:hover{
-  color: #88F;
-}
-
-img{
-  width: 100%;
+#container {
+  margin: auto;
+  position: relative;
+  width: 70%;
+  min-width: 768px;
+  background-color: #F5F5F5;
 }
 
 header {
-  position:relative;
-  height: 8rem;
-  background: #333;
-  box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+  height: 2rem;
+  padding: 3rem;
+  background-color: #AAA;
 }
 
-header h1{
-  position: absolute;
-  top: 3rem;
-  left: 3rem;
-  font-size: 2rem;
+header h1 {
   color: white;
 }
 
 nav {
-  padding: 1rem 3rem ;
-  background: #333;
+  position: relative;
+  z-index: 999;
+  box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
 }
 
-    nav ul{
-      display: flex;
-      flex-direction: row;
-    }
-
-    nav ul li{
-      margin-right: 2rem;
-    }
-
-    nav ul li a {
-      color: white;
-    }
-
-main {
-  width: 84%;
-  max-width: 1280px;
-  margin: 3rem auto 3rem auto;
-  padding-bottom: 2rem;
-  border-bottom: 1px dotted gray;
+.menu {
   display: flex;
-  flex-wrap：wrap;
-  justify-content:space-between;
-}
-
-    section{
-      flex: 3;
-      margin-right: 4rem;
-    }
-
-        article{
-          margin-bottom: 2rem;
-          line-height: 180%;
-        }
-
-        article h1{
-          margin-bottom: 1rem;
-        }
-
-    aside{
-      flex: 1;
-    }
-
-        aside h1{
-          font-size: 1.2rem;
-          margin-bottom: 1rem;
-        }
-        aside ul li{
-          margin-bottom: 0.5rem;
-        }
-
-        aside ul li a{
-          color: black;
-        }
-
-footer {
-  width: 84%;
-  max-width: 1280px;
-  margin: 0 auto 5rem auto;
-	text-align: center;
-}
-
-
-/******** Gallery Style ********/
-
-
-section#gallery {
-  display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
 }
 
-section#gallery article {
-  width: 160px;
-  margin-right: 1rem;
-  margin-bottom: 3rem;
-  line-height: 150%;
+.menu li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  background-color: #555;
 }
 
-section#gallery article div{
-  margin-bottom: 0.5rem;
+.menu a{
+  display: block;
+  padding: 1rem;
+  color: white;
 }
 
+.menu a:hover{
+  color: #0080FF;
+  background-color: white;
+}
 
-/******* Smart Phone *******/
+.menu li:hover .menu-child{
+  visibility: visible;
+  opacity: 1;
+}
 
-@media only screen and (max-width: 640px) {
+.menu-child {
+  position: absolute;
+  top: 3rem;
+  left: 0px;
+  width: 100%;
+  box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+}
 
-  header{
-    padding-top: 6rem;
-  }
+.menu-child li {
+  border-top: 1px dotted silver;
+}
 
-    header h1{
-      position: static;
-      text-align: center;
-    }
+article {
+  padding: 3rem;
+}
 
-  nav{
-    padding: 0;
-  }
+article p {
+  line-height: 180%;
+}
 
-  	nav ul {
-  		flex-direction: column;
-  	}
+article h1{
+  margin-bottom: 1rem;
+}
 
-  	nav ul li {
-      margin: 0;
-  		padding: 1rem 0;
-  		border-bottom: 1px solid gray;
-      text-align: center;
-  	}
-
-  main {
-    width: 90%;
-    flex-direction: column;
-  }
-
-    section {
-      margin-right: 0;
-      border-bottom: 1px dotted gray;
-      margin-bottom: 2rem;
-    }
-
-    section#gallery {
-      display: block;
-    }
-
-    section#gallery article{
-      width: 100%;
-      margin: 0 auto 2rem auto;
-    }
-
-
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #AAA;
+  color: white;
 }
